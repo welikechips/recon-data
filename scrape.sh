@@ -34,7 +34,7 @@ tmux select-pane -t "${pane21}"
 sleep 7
 
 # can attach to see what is going on .. DEBUGGING
-tmux attach -t gather-data
+# tmux attach -t gather-data
 # once you detach it will kill-session (see below)
 
 #kill tmux session
