@@ -7,3 +7,9 @@
 ```shell
 apt install sshpass
 ```
+
+## Usage:
+
+```shell
+./scrape.sh <user@hostname> <password> <connect-back-ip> <connect-back-port>
+```
