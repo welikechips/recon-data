@@ -1,2 +1,10 @@
+*.lst
 *.b64
 /.idea/
+notes
+compromised/*
+!compromised/.gitkeep
+t
+key
+key.pub
+/1stpass/

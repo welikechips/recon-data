@@ -10,6 +10,8 @@ apt install sshpass
 
 ## Usage:
 
+### MAKE SURE TO BE IN A NORMAL SHELL!!!!!!!!
+
 ```shell
 ./scrape.sh <user@hostname> <password> <connect-back-ip> <connect-back-port>
 ```
